@@ -12,6 +12,9 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
+nav .menu-icon {
+  display: none;
+}
 nav .logo {
   width: 110px;
   cursor: pointer;
@@ -21,10 +24,10 @@ nav .list {
   justify-content: space-between;
   align-items: center;
   list-style: none;
+  gap: 3rem;
 }
 nav .list .list-item {
-  margin: 0 20px;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   cursor: pointer;
@@ -33,7 +36,7 @@ nav .list .list-item {
 }
 .btn {
   padding: 1px 13px;
-  font-size: 14px;
+  font-size: 0.8rem;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   background: linear-gradient(90deg, #955cf1, #ff8adc);
@@ -45,7 +48,7 @@ nav .list .list-item {
   transition: all 0.2s ease-in-out;
 }
 .btn:hover {
-  padding: 2px 13px;
+  transform: scale(1.03);
 }
 
 /* ------------------------------ */
@@ -59,19 +62,19 @@ nav .list .list-item {
 }
 .container .container-left h1 {
   margin-top: 130px;
-  font-size: 65px;
+  font-size: 4rem;
   color: #3e4794;
 }
 .container .container-left p {
   margin: 50px 0;
   width: 27vw;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 25px;
   color: #a0a0a0;
 }
 .btn-large {
   padding: 5px 30px;
-  font-size: 30px;
+  font-size: 1.8rem;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   background: linear-gradient(90deg, #955cf1, #ff8adc);
@@ -83,7 +86,7 @@ nav .list .list-item {
   transition: 0.2s ease-in-out;
 }
 .btn-large:hover {
-  padding: 6px 30px;
+  transform: scale(1.03);
 }
 .container .container-right .images .background-image {
   position: absolute;
@@ -97,4 +100,79 @@ nav .list .list-item {
   top: 120px;
   right: 55px;
   width: 60vw;
+}
+
+/* Responsive CSS */
+@media only screen and (max-width: 1024px) {
+  nav {
+    padding: 30px 5%;
+  }
+  nav .logo {
+    width: 5rem;
+  }
+  nav .list .list-item {
+    font-size: 0.8rem;
+  }
+  .container {
+    padding-left: 5%;
+  }
+  .container .container-left h1 {
+    font-size: 3rem;
+  }
+  .container .container-left p {
+    margin: 1rem 0;
+    font-size: 0.8rem;
+  }
+  .container .container-right .images .vector-image {
+    width: 50vw;
+    z-index: -1;
+  }
+  .btn-large {
+    padding: 8px 20px;
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  nav .list {
+    display: none;
+  }
+  nav div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  nav .menu-icon {
+    display: block;
+  }
+  nav .logo {
+    width: 3rem;
+  }
+  .container .container-left h1 {
+    margin-top: 3rem;
+  }
+  .container .container-left p {
+    width: 40ch;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .container {
+    padding: 0 5%;
+  }
+  .container .container-left {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .container .container-left h1 {
+    margin-top: 18rem;
+  }
+  .container .container-left p {
+    width: auto;
+  }
+  .container .container-right .images .background-image {
+    width: 80vw;
+  }
+  .container .container-right .images .vector-image {
+    width: 70vw;
+  }
 }
